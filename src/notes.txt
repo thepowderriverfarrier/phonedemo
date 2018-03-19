@@ -1,0 +1,17 @@
+Text Mask does not provide an option to unmask the model before storing it. The value
+has to be sanitized prior to saving.
+
+Passing the $event in the function exposes more than necessary and is not part of
+  Angular's best practices.
+
+Autofocus only activates when the page is loaded ( a known bootstrap issue: 
+  https://github.com/twbs/bootstrap/issues/12525).  An angular directive can
+  be written to handle this.
+
+The array of data is used to easily demonstrate paging without needing to be connected
+  to a database.  Code can be provided to demonstrate connecting this to a Firebase.
+  
+Paging was a useful means of displaying datasets when the design was centered on 
+relational tables.  Today design is focused on speed and the user experience.  Leveraging
+  observables and/or using GraphQL would provide a much faster and better UX
+  when working with large datasets.

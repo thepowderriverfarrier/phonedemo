@@ -1,0 +1,44 @@
+The simple demo to allow users to enter serial 
+  phone numbers easily by changing just the last
+  digit ( 0 - 9 ) to indicate multiple lines behind a pbx or
+  enter completely new numbers as needed.
+
+The demo using an in memory array for data that can
+  be reset by clicking the <Clear Array> button.  The
+  navbar is simple used to make the demo a little more visually
+  appealing; no useful functions for it are assumed.  
+
+The paging occurs automatically and can easily be 
+  changed to reflect the desired amount of information to display.   
+  This works fine for a small amount of data but as the volume 
+  of data grows the users would be better served by using 
+  continuous scrolling in Angular.   The very best 
+  solution, in terms of large datasets, would be 
+  to implement GraphQL between the database/api and 
+  the UI.
+
+The .spec unit test files were left intentionally 
+  as they are to demonstrate that it is possible 
+  to write functional code that does contain 
+  errors thereby reinforcing the need for unit,
+  integration and end to end testing.
+
+The demo.spec.ts (unrelated to the working demo) file is used to demonstrate 
+  creating a unit test from scratch for protractor. 
+  The comments desribe how the test(s) can be altered.
+
+The test service (unrelated to the working demo) demostrates how a 
+created service can be tested.
+  It will test that the service is created; that the function is created; and,
+  that the service function returns the correct value.
+
+The karma.config file can be edited to allow for testing with 
+  multiple browsers assuming folks are not using up to date software.
+  ex:        require('karma-firefox-launcher'),
+  and        browsers: ['Chrome', 'Firefox'],
+
+Not mentioned in the request for coding the demo 
+  was checking the security of the code itself. 
+  Something as simple as accepted node libraries 
+  need to be checked for security leaks with 
+  software like snyk or blackduck.  

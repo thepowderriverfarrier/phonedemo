@@ -1,0 +1,26 @@
+<app-app-navbar></app-app-navbar>
+<div class="container">
+  <div class="starter-template">
+    <h1>Phone Number Listing</h1>
+    <p class="lead">Use this input to add phone numbers ...
+    </p>
+
+      <input type="text" 
+      ng-focus="true" 
+      [(ngModel)]="phoneNumber" 
+      (keydown.enter)="listPhoneNumber($event)" 
+       [textMask]="{mask:mask}" pattern="\+\d \(\d{3}\) \d{3}-\d{4}" required
+      />
+      <button type="submit" (click)="clearText($event)">Clear Array</button>
+      <br /><br />
+      <ul>
+        <li *ngFor="let number of phoneArray | paginate: {itemsPerPage: 10, currentPage: p}" >{{ number }}</li>
+      </ul>
+
+      <pagination-controls (pageChange)="p =$event"></pagination-controls>
+
+
+  </div>
+
+
+</div>
