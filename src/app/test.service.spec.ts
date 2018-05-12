@@ -21,6 +21,6 @@ describe('TestService', () => {
   }));
 
   it('should add the numbers', inject([TestService], (service: TestService) => {
-    expect(service.add(2, 2).toEqual(4);
+    expect(service.add(2, 2).toEqual(4));
   }));
 });

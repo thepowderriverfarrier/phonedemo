@@ -16,7 +16,7 @@ export class AppComponent {
   phoneNumber = '(###) ###-####';
   phoneArray = [];
   contString = '';
-  // counter = 0;
+  p = '';
 
 
 
